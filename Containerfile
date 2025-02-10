@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/silverblue-main:latest
+FROM ghcr.io/ublue-os/bazzite:stable
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:stable
@@ -14,8 +14,13 @@ FROM ghcr.io/ublue-os/silverblue-main:latest
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
+COPY scripts/shared/packages.sh /tmp/packages.sh
+
+COPY files/shared /
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
-    ostree container commit
+    /tmp/packages.sh && \
+    ostree container commit && \
+    bootc container lint
     
