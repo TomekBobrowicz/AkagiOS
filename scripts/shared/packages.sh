@@ -10,6 +10,6 @@ wget https://download.opensuse.org/repositories/home:paul4us/Fedora_Rawhide/home
 wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr0.repo -P /etc/yum.repos.d
 dnf5 -y copr enable peterwu/rendezvous
 
-dnf -y install bibata-cursor-themes papirus-icon-theme ventoy libappstream-glib virt-manager virt-install libvirt-daemon-config-network libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top swtpm edk2-ovmf nvtop nu code
+dnf -y install bibata-cursor-themes papirus-icon-theme ventoy libappstream-glib virt-manager virt-install libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top nu code
 
 systemctl enable podman.socket libvirtd
