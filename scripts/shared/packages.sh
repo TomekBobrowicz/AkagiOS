@@ -18,9 +18,4 @@ dnf5 -y copr enable varlad/yazi
 dnf -y install bibata-cursor-themes papirus-icon-theme libappstream-glib virt-manager virt-install libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top nu code hyprland hyprpaper hyprlock hypridle hyprland-qtutils xdg-desktop-portal-hyprland kitty  
 dnf -y install pipx cliphist nwg-look nwg-dock-hyprland SwayNotificationCenter yazi neovim btop grim slurp waybar rofi-wayland qt6ct nm-connection-editor network-manager-applet pavucontrol papirus-icon-theme-dark wlogout fontawesome-6-free-fonts NetworkManager-tui brightnessctl tumbler   
 
-pipx install hyprshade
-pip install pywal
-pip install screeninfo
-pip install waypaper
-
 systemctl enable podman.socket libvirtd
