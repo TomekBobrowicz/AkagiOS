@@ -8,8 +8,24 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 
 wget https://download.opensuse.org/repositories/home:paul4us/Fedora_Rawhide/home:paul4us.repo -P /etc/yum.repos.d
 wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr0.repo -P /etc/yum.repos.d
-dnf5 -y copr enable peterwu/rendezvous
+wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh &>> $(_getLogFile)
+chmod +x /usr/local/bin/oh-my-posh
 
-dnf -y install bibata-cursor-themes papirus-icon-theme libappstream-glib virt-manager virt-install libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top nu code
+dnf5 -y copr enable peterwu/rendezvous
+dnf5 -y copr enable wef/cliphist
+dnf5 -y copr enable solopasha/hyprland
+dnf5 -y copr enable tofik/nwg-shell
+dnf5 -y copr enable erikreider/SwayNotificationCenter
+dnf6 -y copr enable varlad/yazi
+
+dnf config-manager setopt google-chrome.enabled=1
+
+dnf -y install bibata-cursor-themes papirus-icon-theme libappstream-glib virt-manager virt-install libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top nu code google-chrome-stable hyprland hyprpaper hyprlock hypridle xdg-desktop-portal-hyprland kitty qt5-qtwayland qt6-qtwayland 
+dnf -y install cliphist nwg-look nwg-dock-hyprland SwayNotificationCenter yazi neovim btop grim slurp waybar rofi-wayland qt6ct nm-connection-editor network-manager-applet pavucontrol papirus-icon-theme-dark wlogoutfontawesome-6-free-fonts NetworkManager-tui brightnessctl tumbler   
+
+pip install hyprshade
+pip install pywal
+pip install screeninfo
+pip install waypaper
 
 systemctl enable podman.socket libvirtd
