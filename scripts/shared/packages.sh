@@ -13,7 +13,7 @@ dnf5 -y copr enable peterwu/rendezvous
 dnf5 -y copr enable solopasha/hyprland
 dnf5 -y copr enable tofik/nwg-shell
 dnf5 -y copr enable erikreider/SwayNotificationCenter
-dnf6 -y copr enable varlad/yazi
+dnf5 -y copr enable varlad/yazi
 
 dnf config-manager setopt google-chrome.enabled=1
 
