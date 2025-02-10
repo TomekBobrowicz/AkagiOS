@@ -10,7 +10,6 @@ wget https://download.opensuse.org/repositories/home:paul4us/Fedora_Rawhide/home
 wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr0.repo -P /etc/yum.repos.d
 
 dnf5 -y copr enable peterwu/rendezvous
-dnf5 -y copr enable wef/cliphist
 dnf5 -y copr enable solopasha/hyprland
 dnf5 -y copr enable tofik/nwg-shell
 dnf5 -y copr enable erikreider/SwayNotificationCenter
