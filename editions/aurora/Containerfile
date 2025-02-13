@@ -14,7 +14,7 @@ FROM ghcr.io/ublue-os/aurora:stable-daily
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY build.sh /tmp/build.sh
-COPY scripts/shared/packages.sh /tmp/packages.sh
+COPY scripts/shared/packages-aurora.sh /tmp/packages.sh
 
 COPY files/shared /
 
