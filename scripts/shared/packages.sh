@@ -12,5 +12,5 @@ wget https://download.opensuse.org/repositories/home:Alxhr0/Fedora_41/home:Alxhr
 dnf5 -y copr enable peterwu/rendezvous
 
 
-dnf -y install bibata-cursor-themes papirus-icon-theme libappstream-glib virt-manager virt-install libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top nu code neovim btop discord 
+dnf5 -y install bibata-cursor-themes papirus-icon-theme libappstream-glib virt-manager virt-install libvirt-daemon-kvm qemu-kvm virt-viewer libguestfs-tools python3-libguestfs virt-top nu code neovim btop discord 
 systemctl enable podman.socket libvirtd
